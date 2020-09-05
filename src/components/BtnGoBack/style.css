@@ -1,0 +1,15 @@
+.btnGoBack {
+    position: absolute;
+    top: 36px;
+    left: var(--container-size);
+    background-color: transparent;
+    height: 48px;
+    width: 48px;
+    margin-left: -16px;
+    margin-top: -16px;
+}
+
+.btnGoBack svg {
+    width: 16px;
+    height: 16px;
+}

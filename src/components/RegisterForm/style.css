@@ -1,0 +1,100 @@
+.registerForm {
+    background-color: #FAFAFA;
+    padding: var(--container-size);
+}
+
+.registerForm .registerWrapper {
+    position: relative;
+    padding-top: 66px;
+    text-align: center;
+    color: #686E7B;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.registerForm .registerWrapper .title {
+    font-size: 20px;
+    margin-bottom: 16px;
+}
+
+.registerForm .registerWrapper .description {
+    font-size: 14px;
+    margin-bottom: 24px;
+}
+
+.registerForm .registerWrapper .form .tns-nav {
+    text-align: center;
+    margin-bottom: 36px;
+}
+
+.registerForm .registerWrapper .form .tns-nav button {
+    pointer-events: none;
+    background-color: #CFD5E6;
+    width: 48px;
+    height: 4px;
+    margin: 0 4px;
+}
+
+.registerForm .registerWrapper .form .tns-nav button.tns-nav-active {
+    background-color: #7284AE;
+}
+
+.registerForm .registerWrapper .form .inputField {
+    position: relative;
+    text-align: left;
+    margin-bottom: 14px;
+}
+
+.registerForm .registerWrapper .form .inputField label {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.registerForm .registerWrapper .form .inputField input,
+.registerForm .registerWrapper .form .inputField select {
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    height: 48px;
+    border: 2px solid #e3e6ec;
+    font-size: 14px;
+    padding: 14px 20px;
+    color: #686E7B;
+}
+
+.registerForm .registerWrapper .form .inputField select {
+    background-color: #FFFFFF;
+    padding: 12px 15px;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    appearance:none;
+}
+
+.registerForm .registerWrapper .form .inputField .selectWrapper {
+    position: relative;
+}
+
+.registerForm .registerWrapper .form .inputField .selectWrapper:after {
+    content: "";
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    border: solid #686E7B;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg) translateY(-50%);
+    display: inline-block;
+    padding: 2px;
+}
+
+.registerForm .btn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #FF8C80;
+    padding: 18px 0;
+    border-radius: 4px;
+    color: #FFFFFF;
+    font-weight: bold;
+    text-transform: uppercase;
+}
