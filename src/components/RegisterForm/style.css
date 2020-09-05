@@ -86,10 +86,18 @@
     padding: 2px;
 }
 
-.registerForm .btn {
+.registerForm .btnWrapper {
     position: absolute;
     bottom: 0;
     left: 0;
+    width: 100%;
+}
+
+.registerForm .btnWrapper .message {
+    margin-bottom: 4px;
+}
+
+.registerForm .btnWrapper .btn {
     width: 100%;
     background-color: #FF8C80;
     padding: 18px 0;
