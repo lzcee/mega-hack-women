@@ -1,0 +1,96 @@
+.loginForm {
+    position: relative;
+    background-color: #FAFAFA;
+    padding: 35px var(--container-size);
+    color: #7284AE;
+    text-align: center;
+}
+
+.loginForm .logo {
+    position: absolute;
+    top: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.loginForm .formWrapper {
+    box-sizing: border-box;
+    height: calc(100% - 100px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.loginForm .formWrapper .title {
+    font-size: 20px;
+    margin-bottom: 24px;
+}
+
+.loginForm .formWrapper .login {
+    position: relative;
+    text-align: right;
+}
+
+.loginForm .formWrapper .login input {
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #FFFFFF;
+    border: 2px solid #d9deea;
+    padding: 14px 20px;
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+.loginForm .formWrapper .login input[type="password"] {
+    margin-bottom: 12px;
+}
+
+.loginForm .formWrapper .login input::placeholder {
+    color: #CFD5E6;
+}
+
+.loginForm .formWrapper .login .forgotPassword,
+.loginForm .formWrapper .login .message {
+    display: inline-block;
+    color: #7284AE;
+    margin-bottom: 14px;
+}
+
+.loginForm .formWrapper .login .message {
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+.loginForm .formWrapper .login .submit {
+    border: none;
+    background-color: #FF8C80;
+    border-radius: 4px;
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: uppercase;
+    padding: 16px 20px;
+}
+
+.loginForm .registerNow {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.loginForm .registerNow .title {
+    margin-bottom: 14px;
+    color: #7284AE;
+}
+
+.loginForm .registerNow .btn {
+    padding: 17px 0;
+    display: block;
+    background-color: #CFD5E6;
+    color: #7284AE;
+    font-weight: bold;
+    text-transform: uppercase;
+}

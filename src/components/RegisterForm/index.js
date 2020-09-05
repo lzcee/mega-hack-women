@@ -66,7 +66,7 @@ const RegisterForm = () => {
                 formal: userType,
                 tags: [segment],
                 cnpj: null,
-                description: null,
+                desc: null,
             }
             setMessage("");
             sendData(data);
@@ -77,10 +77,9 @@ const RegisterForm = () => {
     };
 
     const sendData = (data) => {
-
         axios.post("http://localhost:5000/api/users", data)
         .then(res => {
-            history.push("/login", res.name);
+            history.push({ pathname: "/login", state: { name: res.data.name } });
         })
         .catch(err => {
             history.push("/cadastro");
