@@ -5,6 +5,8 @@ import * as serviceWorker from "./services/serviceWorker";
 
 import Routes from "./routes";
 
+import "./styles/common.css"
+
 ReactDOM.render(
 	<React.StrictMode>
 		<Routes />

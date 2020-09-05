@@ -1,0 +1,78 @@
+.steps {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.steps .stepsWrapper {
+	width: 100%;
+}
+
+.steps .stepsWrapper .step {
+	text-align: center;
+	color: #686e7b;
+	margin-bottom: 75px;
+}
+
+.steps .stepsWrapper .step .img {
+	margin-bottom: 30px;
+}
+
+.steps .stepsWrapper .step .img svg {
+	width: 184px;
+	height: 160px;
+}
+
+.steps .stepsWrapper .step .title {
+	font-size: 20px;
+	line-height: 1.2;
+	margin-bottom: 4px;
+}
+
+.steps .stepsWrapper .step .description {
+	font-size: 14px;
+}
+
+.steps .stepsWrapper .tns-nav {
+	text-align: center;
+}
+
+.steps .stepsWrapper .tns-nav button {
+	width: 6px;
+	height: 6px;
+	margin: 0 5px;
+	border-radius: 50%;
+	background-color: #cfd5e6;
+}
+
+.steps .stepsWrapper .tns-nav button.tns-nav-active {
+	background-color: #6b7999;
+}
+
+.steps .btns {
+	position: absolute;
+	bottom: 24px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.steps .btns .btn {
+	display: inline-block;
+	text-align: center;
+	border-radius: 4px;
+	border: 2px solid #ff8c80;
+	font-size: 12px;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 17px 0;
+	background-color: transparent;
+	color: #ff8c80;
+	min-width: calc(50% - 8px);
+}
+
+.steps .btns .btn.next {
+	color: #ffffff;
+	background-color: #ff8c80;
+}
