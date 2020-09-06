@@ -1,0 +1,54 @@
+.matchResults {
+    margin-top: 35px;
+    height: 100vh;
+    overflow: auto;
+}
+
+.matchResults .contentMatchWrapper {
+    text-align: center;
+}
+
+.matchResults .smartIcon {
+    margin: 46px auto 24px;
+    width: 310px;
+    height: 221px;
+}
+
+.matchResults .smartTitle {
+    font-size: 16px;
+    color: #686E7B;
+    line-height: 1.5;
+    margin-bottom: 48px;
+}
+
+
+.matchResults .manualTitle {
+    color: #686E7B;
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 33px;
+}
+
+.matchResults .filter {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 32px;
+    right: 24px;
+    z-index: 5;
+}
+
+.matchResults .btnFilter {
+    border-radius: 4px;
+    background-color: #ff8c80cc;
+    color: #FFFFFF;
+    font-size: 14px;
+    padding: 12px 33px;
+    position: absolute;
+    bottom: 34px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    z-index: 5;
+}

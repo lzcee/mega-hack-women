@@ -1,17 +1,27 @@
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
-import MatchCard from '../components/MatchCard';
+import MatchResults from '../components/MatchResults';
 
 const SmartMatchResults = () => {
 
     const location = useLocation();
+    const type = "smart";
 
-    const card = {
-        name: "Nome Sobrenome",
-        segment: location.state.segment,
-        business: location.state.business,
-    }
+    const cardsList = [
+        {
+            id: 1,
+            name: "Nome Sobrenome",
+            segment: "teste",
+            business: "teste"
+        },
+        {
+            id: 2,
+            name: "Nome Sobrenome",
+            segment: "teste",
+            business: "teste"
+        }
+    ]
 
     useEffect(() => {
 
@@ -21,8 +31,8 @@ const SmartMatchResults = () => {
     })
 
     return (
-        <div className="smartMatchResults fullScreen container">
-            <MatchCard {... card}/>
+        <div className="smartMatchResults fullScreen">
+            <MatchResults cardsList={cardsList} type={type}/>
         </div>
     )
 }
