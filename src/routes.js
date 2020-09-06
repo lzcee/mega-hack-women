@@ -8,6 +8,7 @@ import Login from "./pages/Login";
 import Home from "./pages/Home";
 import Match from "./pages/Match";
 import SmartMatchFilter from "./pages/SmartMatchFilter";
+import ManualMatchFilter from "./pages/ManualMatchFilter";
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
 	<Route
@@ -37,6 +38,7 @@ const Routes = () => {
 				<PrivateRoute path="/perfil" exact={true} component={Home} />
 				<PrivateRoute path="/match" exact={true} component={Match} />
 				<PrivateRoute path="/match/inteligente/filtrar" exact={true} component={SmartMatchFilter} />
+				<PrivateRoute path="/match/manual/filtrar" exact={true} component={ManualMatchFilter} />
 			</Switch>
 		</BrowserRouter>
 	);
