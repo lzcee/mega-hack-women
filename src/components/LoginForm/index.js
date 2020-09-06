@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useHistory } from "react-router-dom";
 import axios from 'axios';
+import { login } from '../../services/auth';
 
 import "./style.css";
 
@@ -24,8 +25,8 @@ const LoginForm = () => {
         })
         .then(res => {
             setMessage("");
-            localStorage.setItem('token', res.data.token);
-            history.push('/perfil');
+            login(res.data.token);
+            history.push('/home');
         })
         .catch(err => {
             setMessage("Ops! Email ou senha incorretos");

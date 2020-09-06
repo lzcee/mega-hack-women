@@ -1,0 +1,57 @@
+.navMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.navMenu .menuItems {
+    padding: 33px var(--container-size) 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    background-color: #F2F3F6;
+}
+
+.navMenu .menuItems .item {
+    position: relative;
+    width: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.navMenu .menuItems .item svg {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 6px;
+}
+
+.navMenu .menuItems .item svg * {
+    fill: #686E7B;
+}
+
+.navMenu .menuItems .item a {
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
+    font-size: 11px;
+    text-align: center;
+    color: #686E7B;
+    padding: 0 0 9px;
+}
+
+.navMenu .menuItems .item a.active {
+    border-bottom: 2px solid #FF8C80;
+}
+
+.navMenu .menuItems .item a:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
