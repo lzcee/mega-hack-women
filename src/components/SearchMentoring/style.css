@@ -1,6 +1,4 @@
 .searchMentoring {
-    position: relative;
-    top: var(--menu-height);
     background-color: #FFFFFF;
     padding: 28px var(--container-size);
     margin-bottom: 24px;

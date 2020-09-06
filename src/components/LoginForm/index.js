@@ -16,7 +16,7 @@ const LoginForm = () => {
     const handleSubmit = (event) => {
 
         event.preventDefault();
-        console.log(email + password)
+
         axios.get("http://localhost:5000/api/token", {
             auth: { 
                username: email, 

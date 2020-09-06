@@ -1,0 +1,90 @@
+.partnershipResearch {
+    background-color: #ffffff;
+    display: flex;
+    padding: 18px var(--container-size) 16px;
+    color: #686E7B;
+}
+
+.partnershipResearch svg {
+    min-width: 42px;
+    height: 42px;
+    margin-right: 14px;
+}
+
+.partnershipResearch .formWrapper .title {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 14px;
+    font-weight: normal;
+}
+
+.partnershipResearch .formWrapper .title strong {
+    font-weight: bold;
+}
+
+.partnershipResearch .formWrapper .description {
+    color: #C8CBD0;
+    line-height: 1.5;
+    margin-bottom: 16px;
+}
+
+.partnershipResearch .formWrapper .formPartnership .inputWrapper {
+    position: relative;
+    margin-bottom: 14px;
+}
+
+.partnershipResearch .formWrapper .formPartnership .inputWrapper input[type="radio"] { 
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+
+.partnershipResearch .formWrapper .formPartnership .inputWrapper input[type="radio"]:checked + label::before {
+    background-color: #D3D8E8;
+}
+
+.partnershipResearch .formWrapper .formPartnership .inputWrapper input[type="radio"]:checked + label::after {
+    display: block;
+}
+
+.partnershipResearch .formWrapper .formPartnership .inputWrapper label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: #686E7B;
+    font-size: 14px;
+}
+
+.partnershipResearch .formWrapper .formPartnership .inputWrapper label::before {
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    border: 1px solid #D3D8E8;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+.partnershipResearch .formWrapper .formPartnership .inputWrapper label::after {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    display: none
+}
+
+.partnershipResearch .formWrapper .formPartnership .btn {
+    background-color: #FF8C80;
+    border-radius: 4px;
+    padding: 17px 56px;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+}
