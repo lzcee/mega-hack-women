@@ -15,7 +15,20 @@ const MatchResults = ({ cardsList, type }) => {
 
 	return (
 		<section className="matchResults container">
-			<BtnGoBack />
+            <div className="topBar">
+                <BtnGoBack />
+                {type === "manual" && (
+                    <>
+                        <h2 className="manualTitle">Compatíveis</h2>
+                        <Link
+                            className="filter"
+                            to={{ pathname: "/match/manual/filtrar" }}
+                        >
+                            <FilterIcon />
+                        </Link>
+                    </>
+                )}
+            </div>
 			{type === "smart" && (
 				<div className="contentMatchWrapper">
 					<SmartIcon className="smartIcon" />
@@ -26,21 +39,12 @@ const MatchResults = ({ cardsList, type }) => {
 				</div>
 			)}
 			{type === "manual" && (
-				<>
-					<h2 className="manualTitle">Compatíveis</h2>
-					<Link
-						className="filter"
-						to={{ pathname: "/match/manual/filtrar" }}
-					>
-						<FilterIcon />
-					</Link>
-					<Link
-						className="btnFilter"
-						to={{ pathname: "/match/manual/filtrar" }}
-					>
-						Filtrar melhor os resultados
-					</Link>
-				</>
+                <Link
+                    className="btnFilter"
+                    to={{ pathname: "/match/manual/filtrar" }}
+                >
+                    Filtrar melhor os resultados
+                </Link>
 			)}
 			<div className="cardsWrapper">{cards}</div>
 		</section>

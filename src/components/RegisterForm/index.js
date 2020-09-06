@@ -129,7 +129,7 @@ const RegisterForm = () => {
                                 </div>
                             </div>
                             <div className="inputField">
-                                <label htmlFor="business">Tipo de Negócio</label>
+                                <label htmlFor="business">Modelo de Negócio</label>
                                 <div className="selectWrapper">
                                     <select name="business" id="business" onChange={ e => setBusiness(e.target.value) }>
                                         <option value="Qualquer">Qualquer</option>
@@ -140,7 +140,7 @@ const RegisterForm = () => {
                                 </div>
                             </div>
                             <div className="inputField">
-                                <label htmlFor="segment">Ramo</label>
+                                <label htmlFor="segment">Segmento</label>
                                 <div className="selectWrapper">
                                     <select name="segment" id="segment" onChange={ e => setSegment(e.target.value) }>
                                         <option value="Qualquer">Qualquer</option>

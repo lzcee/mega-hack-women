@@ -1,16 +1,30 @@
 .matchResults {
     margin-top: 35px;
-    height: 100vh;
-    overflow: auto;
 }
 
 .matchResults .contentMatchWrapper {
     text-align: center;
 }
 
+.matchResults .topBar {
+    position: fixed;
+    background-color: #ffffff;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-top: 20px;
+    z-index: 5;
+}
+
+.matchResults .topBar .btnGoBack {
+    position: static;
+    margin: 0 0 0 12px;
+}
+
 .matchResults .smartIcon {
     margin: 46px auto 24px;
-    width: 310px;
+    width: 100%;
+    max-width: 310px;
     height: 221px;
 }
 
@@ -18,9 +32,7 @@
     font-size: 16px;
     color: #686E7B;
     line-height: 1.5;
-    margin-bottom: 48px;
 }
-
 
 .matchResults .manualTitle {
     color: #686E7B;
@@ -28,6 +40,10 @@
     text-align: center;
     text-transform: uppercase;
     margin-bottom: 33px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .matchResults .filter {
@@ -45,10 +61,14 @@
     color: #FFFFFF;
     font-size: 14px;
     padding: 12px 33px;
-    position: absolute;
+    position: fixed;
     bottom: 34px;
     left: 50%;
     transform: translateX(-50%);
     white-space: nowrap;
     z-index: 5;
+}
+
+.matchResults .cardsWrapper {
+    padding: 48px 0 76px;
 }

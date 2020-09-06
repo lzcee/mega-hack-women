@@ -9,8 +9,8 @@ const MatchCard = ({ name, business, segment }) => {
 			<img className="img" src={require("./avatar.png")} alt={name} />
 			<div className="contentWrapper">
 				<h3 className="name">{name}</h3>
-				<p className="description">Tipo de negócio: {business}</p>
-				<p className="description">Ramo: {segment}</p>
+				<p className="description">Modelo de Negócio: {business}</p>
+				<p className="description">Segmento: {segment}</p>
 			</div>
 			<Link
 				className="link"
