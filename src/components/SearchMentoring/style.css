@@ -1,0 +1,25 @@
+.searchMentoring {
+    position: relative;
+    top: var(--menu-height);
+    background-color: #FFFFFF;
+    padding: 28px var(--container-size);
+    margin-bottom: 24px;
+}
+
+.searchMentoring .title {
+    font-size: 16px;
+    color: #686E7B;
+    margin-bottom: 28px;
+}
+
+.searchMentoring .btn {
+    background-color: #FF8C80;
+    border-radius: 4px;
+    display: block;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 17px 0;
+    text-align: center;
+}

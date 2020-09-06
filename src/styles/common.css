@@ -47,3 +47,8 @@ button {
     left: 0;
     right: 0;
 }
+
+.screenBackground {
+    background-color: #F2F3F6;
+    overflow-y: auto;
+}

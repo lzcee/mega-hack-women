@@ -1,8 +1,14 @@
+:root {
+    --menu-height: 86px;
+}
+
 .navMenu {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
+    height: var(--menu-height);
+    z-index: 5;
 }
 
 .navMenu .menuItems {
