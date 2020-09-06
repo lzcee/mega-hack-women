@@ -1,0 +1,34 @@
+.matchMentoring {
+    margin-top: 36px;
+    text-align: center;
+}
+
+.matchMentoring .title {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #686E7B;
+    margin-bottom: 48px;
+}
+
+.matchMentoring .icon {
+    width: 253px;
+    height: 198px;
+    margin: 0 auto 36px;
+}
+
+.matchMentoring .btn {
+    display: block;
+    border: 2px solid #FF8C80;
+    padding: 17px 0;
+    color: #FF8C80;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+
+.matchMentoring .btn.color {
+    background-color: #FF8C80;
+    color: #ffffff;
+    margin-bottom: 16px;
+}

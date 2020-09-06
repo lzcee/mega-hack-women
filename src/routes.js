@@ -6,6 +6,7 @@ import Onboarding from "./pages/Onboarding";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
+import Match from "./pages/Match";
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
 	<Route
@@ -33,6 +34,7 @@ const Routes = () => {
 				<PrivateRoute path="/chat" component={Home} />
 				<PrivateRoute path="/comunidade" component={Home} />
 				<PrivateRoute path="/perfil" component={Home} />
+				<PrivateRoute path="/match" component={Match} />
 			</Switch>
 		</BrowserRouter>
 	);
