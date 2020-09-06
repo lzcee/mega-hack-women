@@ -18,7 +18,8 @@ const RegisterForm = () => {
     const [password, setPassword] = useState("");
     const [passwordConfirm, setPasswordConfirm] = useState("");
     const [userType, setUserType] = useState(true);
-    const [segment, setSegment] = useState("Tecnologia");
+    const [segment, setSegment] = useState("Qualquer");
+    const [business, setBusiness] = useState("Qualquer");
     const [message, setMessage] = useState("");
 
     const settings = {
@@ -65,9 +66,8 @@ const RegisterForm = () => {
                 password: password,
                 email: email,
                 formal: userType,
-                tags: [segment],
-                cnpj: null,
-                desc: null,
+                business: business,
+                area: segment
             }
             setMessage("");
             sendData(data);
@@ -80,7 +80,7 @@ const RegisterForm = () => {
     const sendData = (data) => {
         axios.post("http://localhost:5000/api/users", data)
         .then(res => {
-            history.push({ pathname: "/login", state: { name: res.data.name } });
+            history.push({ pathname: "/login", state: { email: res.data.email } });
         })
         .catch(err => {
             history.push("/cadastro");
@@ -129,9 +129,21 @@ const RegisterForm = () => {
                                 </div>
                             </div>
                             <div className="inputField">
+                                <label htmlFor="business">Tipo de Negócio</label>
+                                <div className="selectWrapper">
+                                    <select name="business" id="business" onChange={ e => setBusiness(e.target.value) }>
+                                        <option value="Qualquer">Qualquer</option>
+                                        <option value="E-commerce">E-commerce</option>
+                                        <option value="Loja">Loja</option>
+                                        <option value="Quiosque">Quiosque</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div className="inputField">
                                 <label htmlFor="segment">Ramo</label>
                                 <div className="selectWrapper">
-                                    <select name="tags" id="segment" onChange={ e => setSegment(e.target.value) }>
+                                    <select name="segment" id="segment" onChange={ e => setSegment(e.target.value) }>
+                                        <option value="Qualquer">Qualquer</option>
                                         <option value="Tecnologia">Tecnologia</option>
                                         <option value="Vestuário">Vestuário</option>
                                     </select>

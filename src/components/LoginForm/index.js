@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useHistory } from "react-router-dom";
+import { Link, useHistory, useLocation } from "react-router-dom";
 import axios from 'axios';
 import { login } from '../../services/auth';
 
@@ -8,8 +8,9 @@ import "./style.css";
 const LoginForm = () => {
 
     const history = useHistory();
-
-    const [email, setEmail] = useState("");
+    const location = useLocation();
+    
+    const [email, setEmail] = useState(location.state ? location.state.email : "");
     const [password, setPassword] = useState("");
     const [message, setMessage] = useState("");
 
@@ -17,7 +18,7 @@ const LoginForm = () => {
 
         event.preventDefault();
 
-        axios.get("http://localhost:5000/api/token", {
+        axios.get(`http://localhost:5000/api/token/${email}`, {
             auth: { 
                username: email, 
                password: password 
@@ -25,7 +26,7 @@ const LoginForm = () => {
         })
         .then(res => {
             setMessage("");
-            login(res.data.token);
+            login(res.data.token, res.data.id);
             history.push('/home');
         })
         .catch(err => {
@@ -42,7 +43,7 @@ const LoginForm = () => {
             <div className="formWrapper">
                 <h2 className="title">Entrar</h2>
                 <form className="login" method="post" onSubmit={handleSubmit}>
-                    <input type="text" name="email" id="email" placeholder="Email" aria-label="Email" required onChange={ e => setEmail(e.target.value) }/>
+                    <input type="text" name="email" id="email" value={email} placeholder="Email" aria-label="Email" required onChange={ e => setEmail(e.target.value) }/>
                     <input type="password" name="password" id="password" placeholder="Senha" aria-label="Senha" required onChange={ e => setPassword(e.target.value) }/>
                     <a className="forgotPassword" href="/">Esqueceu a senha?</a>
                     <input className="submit" type="submit" value="Entrar"/>

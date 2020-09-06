@@ -20,7 +20,7 @@ const PartnershipResearch = () => {
                 <p className="description">Seja uma parceria para abrir ou alavancar o seu negócio, você poderia encontrar aqui também.</p>
                 <form className="formPartnership" method="post" onSubmit={handleSubmit}>
                     <div className="inputWrapper">
-                        <input type="radio" name="partnerResearch" id="interest" checked/>
+                        <input type="radio" name="partnerResearch" id="interest" defaultChecked/>
                         <label htmlFor="interest">Tenho interesse</label>
                     </div>
                     <div className="inputWrapper">
