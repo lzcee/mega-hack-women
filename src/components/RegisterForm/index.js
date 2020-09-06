@@ -25,7 +25,8 @@ const RegisterForm = () => {
 		loop: false,
         nav: true,
         navPosition: "top",
-		mouseDrag: false,
+        mouseDrag: false,
+        touch: false,
 		controls: false
     };
     
