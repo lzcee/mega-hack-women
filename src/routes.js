@@ -41,7 +41,6 @@ const Routes = () => {
 				<PrivateRoute path="/comunidade" exact={true} component={Home} />
 				<PrivateRoute path="/perfil" exact={true} component={Profile} />
 				<PrivateRoute path="/match" exact={true} component={Match} />
-				<PrivateRoute path="/match/inteligente/filtrar" exact={true} component={SmartMatchFilter} />
 				<PrivateRoute path="/match/inteligente" exact={true} component={SmartMatchResults} />
 				<PrivateRoute path="/match/manual/filtrar" exact={true} component={ManualMatchFilter} />
 				<PrivateRoute path="/match/manual" exact={true} component={ManualMatchResults} />

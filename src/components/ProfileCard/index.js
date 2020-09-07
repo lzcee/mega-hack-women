@@ -30,7 +30,7 @@ const ProfileCard = ({ name, desc, segment, formal, schedule }) => {
 			)}
 			{!formal && (
 				<>
-					<p className="formal">Não Empreendedora</p>
+					<p className="formal">Quero Empreender</p>
 				</>
 			)}
 			<p className="description">{desc}</p>

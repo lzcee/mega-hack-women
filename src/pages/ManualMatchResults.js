@@ -11,14 +11,14 @@ const ManualMatchResults = () => {
 	const history = useHistory();
 	const type = "manual";
 
-	const [cardsList, setCardsList] = useState([]);
+	const [cardsList, setCardsList] = useState(null);
 
 	useEffect(() => {
 
 		var token = getToken();
 		var business = location.state ? location.state.business !== "default" ? location.state.business : null : null;
 		var segment = location.state ? location.state.segment !== "default" ? location.state.segment : null : null;
-		
+
 		axios
 			.put(
                 "http://localhost:5000/api/filter_users",

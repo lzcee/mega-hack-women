@@ -72,3 +72,11 @@
 .matchResults .cardsWrapper {
     padding: 48px 0 76px;
 }
+
+.matchResults .cardsWrapper .notFound {
+    margin-top: 30px;
+    text-align: center;
+    color: #686E7B;
+    font-size: 14px;
+    line-height: 1.7;
+}
