@@ -34,7 +34,7 @@ const MatchFilter = ({type}) => {
                     <label htmlFor="business">Modelo de Negócio</label>
                     <div className="selectWrapper">
                         <select name="business" value={business} id="business" onChange={ e => setBusiness(e.target.value) }>
-                            <option value="default">Selecione um Modelo de Negócio</option>
+                            <option value="default">Qualquer</option>
                             <option value="E-commerce">E-commerce</option>
                             <option value="Loja">Loja</option>
                             <option value="Quiosque">Quiosque</option>
@@ -45,7 +45,7 @@ const MatchFilter = ({type}) => {
                     <label htmlFor="segment">Segmento</label>
                     <div className="selectWrapper">
                         <select name="segment" value={segment} id="segment" onChange={ e => setSegment(e.target.value) }>
-                            <option value="default">Selecione um Segmento</option>
+                            <option value="default">Qualquer</option>
                             <option value="Tecnologia">Tecnologia</option>
                             <option value="Vestuário">Vestuário</option>
                         </select>

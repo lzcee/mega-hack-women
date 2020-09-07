@@ -33,8 +33,8 @@ const MatchResults = ({ cardsList, type }) => {
 				<div className="contentMatchWrapper">
 					<SmartIcon className="smartIcon" />
 					<h2 className="smartTitle">
-						Uhuuul! Encontramos {cardsList.length} mentoras que mais
-						combinam com o seu perfil!
+						Uhuuul! Encontramos {cardsList.length} {cardsList.length === 1 ? 'mentora' : 'mentoras'} que mais
+						{cardsList.length == 1 ? ' combina' : ' combinam'} com o seu perfil!
 					</h2>
 				</div>
 			)}
