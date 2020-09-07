@@ -12,7 +12,7 @@ const MatchMentoring = () => {
             <BtnGoBack />
             <h2 className="title">Buscar Mentorias</h2>
             <IconMatch className="icon"/>
-            <Link className="btn color" to={{ pathname: "/match/inteligente" }}>
+            <Link className="btn color" to={{ pathname: "/match/inteligente/filtrar" }}>
 				Match Inteligente
 			</Link>
             <Link className="btn" to={{ pathname: "/match/manual" }}>
