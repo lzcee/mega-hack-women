@@ -11,6 +11,7 @@ import SmartMatchFilter from "./pages/SmartMatchFilter";
 import SmartMatchResults from "./pages/SmartMatchResults";
 import ManualMatchFilter from "./pages/ManualMatchFilter";
 import ManualMatchResults from "./pages/ManualMatchResults";
+import MentorMatch from "./pages/MentorMatch";
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
 	<Route
@@ -43,6 +44,7 @@ const Routes = () => {
 				<PrivateRoute path="/match/inteligente" exact={true} component={SmartMatchResults} />
 				<PrivateRoute path="/match/manual/filtrar" exact={true} component={ManualMatchFilter} />
 				<PrivateRoute path="/match/manual" exact={true} component={ManualMatchResults} />
+				<PrivateRoute path="/match/mentora" exact={true} component={MentorMatch} />
 			</Switch>
 		</BrowserRouter>
 	);
