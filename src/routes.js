@@ -8,6 +8,7 @@ import Login from "./pages/Login";
 import Home from "./pages/Home";
 import Profile from "./pages/Profile";
 import Match from "./pages/Match";
+import ComingSoon from "./pages/ComingSoon";
 import SmartMatchFilter from "./pages/SmartMatchFilter";
 import SmartMatchResults from "./pages/SmartMatchResults";
 import ManualMatchFilter from "./pages/ManualMatchFilter";
@@ -37,8 +38,8 @@ const Routes = () => {
 				<Route path="/cadastro" exact={true} component={Register} />
 				<Route path="/login" exact={true} component={Login} />
 				<PrivateRoute path="/home" exact={true} component={Home} />
-				<PrivateRoute path="/chat" exact={true} component={Home} />
-				<PrivateRoute path="/comunidade" exact={true} component={Home} />
+				<PrivateRoute path="/chat" exact={true} component={ComingSoon} />
+				<PrivateRoute path="/comunidade" exact={true} component={ComingSoon} />
 				<PrivateRoute path="/perfil" exact={true} component={Profile} />
 				<PrivateRoute path="/match" exact={true} component={Match} />
 				<PrivateRoute path="/match/inteligente/filtrar" exact={true} component={SmartMatchFilter} />

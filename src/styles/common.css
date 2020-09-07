@@ -53,3 +53,11 @@ button {
     overflow-y: auto;
     padding-top: var(--menu-height);
 }
+
+.comingSoon .message {
+    color: #686E7B;
+    padding-top: var(--menu-height);
+    margin: 160px var(--container-size);
+    text-align: center;
+    font-size: 16px;
+}
