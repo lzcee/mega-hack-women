@@ -6,6 +6,7 @@ import Onboarding from "./pages/Onboarding";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
+import Profile from "./pages/Profile";
 import Match from "./pages/Match";
 import SmartMatchFilter from "./pages/SmartMatchFilter";
 import SmartMatchResults from "./pages/SmartMatchResults";
@@ -38,7 +39,7 @@ const Routes = () => {
 				<PrivateRoute path="/home" exact={true} component={Home} />
 				<PrivateRoute path="/chat" exact={true} component={Home} />
 				<PrivateRoute path="/comunidade" exact={true} component={Home} />
-				<PrivateRoute path="/perfil" exact={true} component={Home} />
+				<PrivateRoute path="/perfil" exact={true} component={Profile} />
 				<PrivateRoute path="/match" exact={true} component={Match} />
 				<PrivateRoute path="/match/inteligente/filtrar" exact={true} component={SmartMatchFilter} />
 				<PrivateRoute path="/match/inteligente" exact={true} component={SmartMatchResults} />

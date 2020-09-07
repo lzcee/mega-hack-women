@@ -1,0 +1,94 @@
+.profileCard {
+    background-color: #ffffff;
+    padding: 24px var(--container-size) 16px;
+    text-align: center;
+    color: #686E7B;
+    margin-bottom: 14px;
+}
+
+.profileCard .img {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    margin-bottom: 16px;
+}
+
+.profileCard .name {
+    display: block;
+    color: #686E7B;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.profileCard .name:after {
+    content: "";
+    border: solid #686E7B;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 2px;
+    transform: rotate(-45deg);
+    vertical-align: middle;
+    margin-left: 6px;
+}
+
+.profileCard .formal {
+    margin-bottom: 6px;
+}
+
+
+.profileCard .mentor {
+    display: inline-block;
+    font-size: 10px;
+    color: #FFFFFF;
+    padding: 3px 8px 1px;
+    background-color: #FF8C80;
+    text-transform: uppercase;
+}
+
+.profileCard .description {
+    font-size: 14px;
+    margin: 16px 0 24px;
+    line-height: 1.7;
+}
+
+.profileCard .numbers {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+}
+
+.profileCard .numbers::after,
+.profileCard .numbers::before {
+    content: "";
+    position: absolute;
+    height: 24px;
+    width: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #FF8C80;
+}
+
+.profileCard .numbers::after {
+    right: calc(100% / 3);
+}
+
+.profileCard .numbers::before {
+    left: calc(100% / 3);
+}
+
+.profileCard .numbers .item {
+    max-width: 60px;
+    width: calc(100% / 3);
+}
+
+.profileCard .numbers .item .num {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.profileCard .numbers .item .desc {
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+}

@@ -15,7 +15,15 @@ const Home = () => {
 	const [desc, setDesc] = useState("");
 	const [segment, setSegment] = useState("");
 	const [formal, setFormal] = useState("");
-    const [schedule, setSchedule] = useState("");
+	const [schedule, setSchedule] = useState("");
+	
+	const info = {
+		name: name,
+		desc: desc,
+		segment: segment,
+		formal: formal,
+		schedule: schedule
+	}
     
 	useEffect(() => {
 		var token = getToken();
@@ -44,7 +52,7 @@ const Home = () => {
 
 	return (
 		<div className="home fullScreen screenBackground">
-			<NavigationMenu />
+			<NavigationMenu {...info}/>
 			<SearchMentoring name={name} />
 			<PartnershipResearch />
 		</div>

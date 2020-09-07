@@ -8,7 +8,7 @@ import { ReactComponent as IconProfile } from "./nav-profile.svg";
 
 import './style.css';
 
-const NavigationMenu = () => {
+const NavigationMenu = (props) => {
 	const isActive = (match, location) => {
 		return match ? true : false;
 	};
@@ -36,7 +36,7 @@ const NavigationMenu = () => {
                 </li>
                 <li className="item">
                     <IconProfile/>
-                    <NavLink to="/perfil" isActive={ (match, location) => isActive(match, location)}>
+                    <NavLink to={{ pathname: "/perfil", state: props}} isActive={ (match, location) => isActive(match, location)}>
                         Eu
                     </NavLink>
                 </li>
