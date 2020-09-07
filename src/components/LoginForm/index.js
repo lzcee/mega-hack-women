@@ -3,6 +3,8 @@ import { Link, useHistory, useLocation } from "react-router-dom";
 import axios from 'axios';
 import { login } from '../../services/auth';
 
+import { ReactComponent as Logo } from "./logo.svg";
+
 import "./style.css";
 
 const LoginForm = () => {
@@ -38,7 +40,7 @@ const LoginForm = () => {
     return (
         <section className="loginForm fullScreen">
             <div className="logo">
-                Logo
+                <Logo/>
             </div>
             <div className="formWrapper">
                 <h2 className="title">Entrar</h2>

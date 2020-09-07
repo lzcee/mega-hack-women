@@ -13,6 +13,10 @@
     transform: translateX(-50%);
 }
 
+.loginForm .logo svg {
+    width: 218px;
+}
+
 .loginForm .formWrapper {
     box-sizing: border-box;
     height: calc(100% - 100px);

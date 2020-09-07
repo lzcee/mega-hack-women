@@ -4,8 +4,6 @@ import { Link } from "react-router-dom";
 
 import "./style.css";
 
-import { ReactComponent as StepOne } from "./onboarding-step-one.svg";
-
 const StepByStep = () => {
 	const [slider, setSlider] = useState(null);
 	const [slideIndex, setSlideIndex] = useState(1);
@@ -33,7 +31,7 @@ const StepByStep = () => {
 				>
 					<div className="step">
 						<div className="img">
-							<StepOne />
+							<img className="img" src={require("./step-one.png")} alt="Conecte-se com outras empreendedoras" />
 						</div>
 						<h2 className="title">
 							Conecte-se com outras empreendedoras
@@ -45,7 +43,7 @@ const StepByStep = () => {
 					</div>
 					<div className="step">
 						<div className="img">
-							<StepOne />
+							<img className="img" src={require("./step-two.png")} alt="Seja uma mentora!" />
 						</div>
 						<h2 className="title">Seja uma mentora!</h2>
 						<p className="description">
@@ -56,7 +54,7 @@ const StepByStep = () => {
 					</div>
 					<div className="step">
 						<div className="img">
-							<StepOne />
+							<img className="img" src={require("./step-three.png")} alt="Deu match!" />
 						</div>
 						<h2 className="title">Deu match!</h2>
 						<p className="description">
