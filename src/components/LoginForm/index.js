@@ -43,7 +43,7 @@ const LoginForm = () => {
             <div className="formWrapper">
                 <h2 className="title">Entrar</h2>
                 <form className="login" method="post" onSubmit={handleSubmit}>
-                    <input type="text" name="email" id="email" value={email} placeholder="Email" aria-label="Email" required onChange={ e => setEmail(e.target.value) }/>
+                    <input type="text" name="email" id="email" value={email || ''} placeholder="Email" aria-label="Email" required onChange={ e => setEmail(e.target.value) }/>
                     <input type="password" name="password" id="password" placeholder="Senha" aria-label="Senha" required onChange={ e => setPassword(e.target.value) }/>
                     <a className="forgotPassword" href="/">Esqueceu a senha?</a>
                     <input className="submit" type="submit" value="Entrar"/>
