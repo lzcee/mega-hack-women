@@ -9,9 +9,10 @@ import { ReactComponent as FilterIcon } from "./filter.svg";
 import "./style.css";
 
 const MatchResults = ({ cardsList, type }) => {
-	const cards = cardsList.map((card) => (
-		<MatchCard key={card.id} {...card} />
-	));
+
+    const cards = cardsList.map((card) => (
+        <MatchCard key={card.id} {...card} />
+    ));
 
 	return (
 		<section className="matchResults container">

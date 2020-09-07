@@ -17,7 +17,7 @@ const RegisterForm = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [passwordConfirm, setPasswordConfirm] = useState("");
-    const [userType, setUserType] = useState(true);
+    const [userType, setUserType] = useState("true");
     const [segment, setSegment] = useState("Qualquer");
     const [business, setBusiness] = useState("Qualquer");
     const [message, setMessage] = useState("");
@@ -65,7 +65,7 @@ const RegisterForm = () => {
                 name: name,
                 password: password,
                 email: email,
-                formal: userType,
+                formal: userType === "true" ? true : false,
                 business: business,
                 area: segment
             }

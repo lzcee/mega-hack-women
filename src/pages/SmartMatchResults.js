@@ -16,8 +16,8 @@ const SmartMatchResults = () => {
 
     useEffect(() => {
 
-        var business = location.state ? location.state.business : null;
-        var segment = location.state ? location.state.segment : null;
+        var business = location.state ? location.state.business !== "default" ? location.state.business : null : null;
+		var segment = location.state ? location.state.segment !== "default" ? location.state.segment : null : null;
 
         var token = getToken();
         var id = getId();

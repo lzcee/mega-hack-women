@@ -14,28 +14,32 @@ const ManualMatchResults = () => {
 	const [cardsList, setCardsList] = useState([]);
 
 	useEffect(() => {
-		var token = getToken();
 
+		var token = getToken();
+		var business = location.state ? location.state.business !== "default" ? location.state.business : null : null;
+		var segment = location.state ? location.state.segment !== "default" ? location.state.segment : null : null;
+		
 		axios
-			.get(
-                "http://localhost:5000/api/simple_match/",
+			.put(
+                "http://localhost:5000/api/filter_users",
 				{
 					auth: {
 						username: token,
 						password: "x",
                     },
                     data: {
-                        business: null,
-                        area: null
+                        business: business,
+                        area: segment
+					},
+					headers: {
+                        "Content-Type": "application/json",
                     }
                 }
 			)
 			.then((res) => {
-				console.log(res.data);
 				setCardsList(res.data);
 			})
 			.catch((err) => {
-				console.log(err);
 				history.push("/match");
         	});
         
