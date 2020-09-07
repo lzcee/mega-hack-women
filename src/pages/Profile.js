@@ -12,7 +12,7 @@ const Profile = () => {
 
     const location = useLocation();
     const history = useHistory();
-    const infos = location.state ? location.state : null;
+    var infos = location.state ? location.state : {};
 
     useEffect(() => {
         
@@ -42,7 +42,7 @@ const Profile = () => {
                 });
         }
         
-    }, [])
+    }, [infos, history])
 
     return (
         <div className="profile fullScreen screenBackground">

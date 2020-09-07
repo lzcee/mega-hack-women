@@ -1,13 +1,41 @@
-import React from 'react';
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from 'react';
+import axios from "axios";
 
 import BtnGoBack from "../BtnGoBack";
 
 import './style.css';
 
+import { getToken } from "../../services/auth";
+
 const FoundMentor = ({ area, business, desc, id, name }) => {
 
-    const chatPath = `/chat/${id}`;
+    var subject = "EmpreenDelas - Interesse em Mentoria";
+    var body = `Olá, ${name}! A plataforma EmpreenDelas me indicou seu contato para conversar sobre empreendedorismo, por isso estou te enviando esse e-mail :) Aguardo seu contato! Obrigada.`;
+    var path = `?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    const [email, setEmail] = useState("");
+
+    useEffect(() => {
+
+        var token = getToken();
+
+        axios
+			.get(
+                `http://localhost:5000/api/user_email/${id}`,
+				{
+					auth: {
+						username: token,
+						password: "x",
+                    },
+					headers: {
+                        "Content-Type": "application/json",
+                    }
+                }
+			)
+			.then((res) => {
+				setEmail(res.data);
+			})
+    }, [])
 
     return (
         <section className="foundMentor container">
@@ -29,9 +57,10 @@ const FoundMentor = ({ area, business, desc, id, name }) => {
                 </div>
             </div>
             <div className="btnWrapper">
-                <Link className="btn" to={{ pathname: chatPath, state: { id: id, name: name } }}>
-                    Chamar {name} pra marcar a mentoria
-                </Link>
+                <p>Por enquanto estamos sem o chat :( Mas você pode entrar em contato com a mentora pelo email para marcar a mentoria!</p>
+                <a className="btn" href={`mailto:${email}${path}`}>
+                    Entrar em contato por email
+                </a>
             </div>
         </section>
     )
