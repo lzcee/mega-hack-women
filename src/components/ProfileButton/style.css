@@ -1,0 +1,35 @@
+.btnProfile {
+    position: relative;
+    width: 100%;
+    display: block;
+    background-color: #FFFFFF;
+    padding: 19px var(--container-size);
+    margin-bottom: 1px;
+    color: #686E7B;
+    font-size: 14px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+.btnProfile::after {
+    position: absolute;
+    content: "";
+    border: solid #686E7B;
+    border-width: 0 2px 2px 0;
+    right: var(--container-size);
+    padding: 3px;
+    transform: rotate(-45deg);
+}
+
+.btnProfile svg {
+    width: 16px;
+    height: 16px;
+    margin-right: 16px;
+}
+
+.btnProfile.logout {
+    position: fixed;
+    bottom: 24px;
+    z-index: 5;
+}

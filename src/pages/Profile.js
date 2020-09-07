@@ -3,6 +3,7 @@ import axios from "axios";
 
 import NavigationMenu from "../components/NavigationMenu";
 import ProfileCard from "../components/ProfileCard";
+import ProfileButton from "../components/ProfileButton";
 
 import { useLocation, useHistory } from "react-router-dom";
 import { getToken, getId, logout } from "../services/auth";
@@ -47,6 +48,14 @@ const Profile = () => {
         <div className="profile fullScreen screenBackground">
             <NavigationMenu />
             <ProfileCard {... infos}/>
+            {
+                infos.formal &&
+                <>
+                    <ProfileButton type="awards" text="Conquistas" path="/perfil/conquistas"/>
+                    <ProfileButton type="pointsSwap" text="Troca de pontos" path="/perfil/troca-de-pontos"/>
+                </>
+            }
+            <ProfileButton type="logout" text="Sair" path="/login"/>
         </div>
     )
 
