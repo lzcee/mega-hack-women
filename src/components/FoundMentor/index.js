@@ -10,7 +10,7 @@ import { getToken } from "../../services/auth";
 const FoundMentor = ({ area, business, desc, id, name }) => {
 
     var subject = "EmpreenDelas - Interesse em Mentoria";
-    var body = `Olá, ${name}! A plataforma EmpreenDelas me indicou seu contato para conversar sobre empreendedorismo, por isso estou te enviando esse e-mail :) Aguardo seu contato! Obrigada.`;
+    var body = `Olá, ${name}! A plataforma empreenDelas me indicou seu contato para conversar sobre empreendedorismo, por isso estou te enviando esse e-mail :) Aguardo seu contato! Obrigada.`;
     var path = `?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
     const [email, setEmail] = useState("");
